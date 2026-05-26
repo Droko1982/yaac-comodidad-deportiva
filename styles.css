@@ -4,7 +4,11 @@
 
 /* ---------- 1. RESET & BASE ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 80px;
+}
 body {
   margin: 0;
   font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -15,7 +19,19 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
+body.is-locked { overflow: hidden; }
+.noscript-banner {
+  padding: 12px 16px;
+  background: #FFF3CD;
+  color: #6B5B00;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.noscript-banner a { color: var(--brand-deep); text-decoration: underline; }
+:target { scroll-margin-top: 80px; }
 body, .nav, .section, .footer, .stats, .btn, .product, .feature, .city-card, .care-card, .step, .feature__icon, .faq details, .ig-card, .review, .ship-list li, .ship-free, .about-pillars > div, .compare, .sizes-table, .sizes-table-wrap, .compare-wrap {
   transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
 }
@@ -236,8 +252,10 @@ em { font-style: italic; color: var(--brand); }
   background: var(--brand);
   transition: width var(--t);
 }
-.nav__links a:hover { color: var(--brand); }
-.nav__links a:hover::after { width: 100%; }
+.nav__links a:hover,
+.nav__links a.is-active { color: var(--brand); }
+.nav__links a:hover::after,
+.nav__links a.is-active::after { width: 100%; }
 .nav__actions {
   display: flex;
   align-items: center;
@@ -1333,6 +1351,20 @@ em { font-style: italic; color: var(--brand); }
   border-radius: 4px;
 }
 .btn:focus-visible { outline-offset: 4px; }
+main:focus, section:focus, [tabindex="-1"]:focus { outline: none; }
+
+/* ---------- 21j. PRINT STYLESHEET ---------- */
+@media print {
+  .nav, .ann-bar, .wa-float, .to-top, .m-cta, .nav__mobile, .hero__visual, .stats, .section--ig, .section--reviews { display: none !important; }
+  body { background: #fff !important; color: #000 !important; padding: 0 !important; }
+  .section { padding: 24px 0 !important; page-break-inside: avoid; }
+  .section__head h2 { color: #000 !important; }
+  a { color: #000 !important; }
+  a[href^="https"]::after { content: " (" attr(href) ")"; font-size: 11px; color: #555; }
+  .footer { background: #fff !important; color: #000 !important; }
+  .footer__bottom { color: #555 !important; }
+  img { max-width: 280px !important; }
+}
 
 /* ---------- 21h. MAP LABELS (adapt to theme) ---------- */
 .ship-map { color: var(--ink); }
