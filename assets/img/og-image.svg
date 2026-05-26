@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="ogBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0B0E"/>
+      <stop offset="60%" stop-color="#1A0A14"/>
+      <stop offset="100%" stop-color="#3E0A28"/>
+    </linearGradient>
+    <linearGradient id="ogPink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF2D6B"/>
+      <stop offset="100%" stop-color="#C2185B"/>
+    </linearGradient>
+    <radialGradient id="ogGlow" cx="0.78" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FF2D6B" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FF2D6B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <rect width="1200" height="630" fill="url(#ogGlow)"/>
+
+  <!-- decorative arcs -->
+  <g opacity="0.25" stroke="#FF2D6B" stroke-width="1.5" fill="none">
+    <circle cx="940" cy="320" r="220"/>
+    <circle cx="940" cy="320" r="170"/>
+    <circle cx="940" cy="320" r="120"/>
+  </g>
+
+  <!-- accent dot -->
+  <circle cx="125" cy="135" r="9" fill="url(#ogPink)"/>
+  <text x="150" y="143" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="20" fill="#F8F1E9" letter-spacing="5">SEAMLESS · MADE IN COLOMBIA</text>
+
+  <!-- main wordmark -->
+  <text x="120" y="320" font-family="Anton, 'Archivo Black', Impact, sans-serif" font-weight="900" font-size="220" fill="#F8F1E9" letter-spacing="6">YAAC</text>
+
+  <!-- tagline -->
+  <text x="125" y="395" font-family="Manrope, system-ui, sans-serif" font-weight="800" font-size="44" fill="url(#ogPink)" letter-spacing="2">COMODIDAD DEPORTIVA</text>
+
+  <!-- sub -->
+  <text x="125" y="455" font-family="Manrope, system-ui, sans-serif" font-weight="500" font-size="28" fill="#D9CFC4">Ropa deportiva seamless · Pereira · Envíos a toda Colombia</text>
+
+  <!-- CTA pill -->
+  <rect x="120" y="500" width="320" height="70" rx="35" fill="url(#ogPink)"/>
+  <text x="280" y="546" text-anchor="middle" font-family="Manrope, system-ui, sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="1">PIDE POR WHATSAPP →</text>
+</svg>

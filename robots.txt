@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://droko1982.github.io/yaac-comodidad-deportiva/sitemap.xml
