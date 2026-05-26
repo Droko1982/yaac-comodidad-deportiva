@@ -17,21 +17,25 @@
     });
   }
 
-  /* ---------- MOBILE NAV ---------- */
+  /* ---------- MOBILE NAV (+ body scroll lock) ---------- */
   var burger = document.getElementById("navBurger");
   var mobile = document.getElementById("navMobile");
+  var setMenu = function (open) {
+    if (!burger || !mobile) return;
+    burger.classList.toggle("is-open", open);
+    mobile.classList.toggle("is-open", open);
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("is-locked", open);
+  };
   if (burger && mobile) {
     burger.addEventListener("click", function () {
-      var isOpen = burger.classList.toggle("is-open");
-      mobile.classList.toggle("is-open", isOpen);
-      burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      setMenu(!burger.classList.contains("is-open"));
     });
     mobile.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        burger.classList.remove("is-open");
-        mobile.classList.remove("is-open");
-        burger.setAttribute("aria-expanded", "false");
-      });
+      a.addEventListener("click", function () { setMenu(false); });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && burger.classList.contains("is-open")) setMenu(false);
     });
   }
 
@@ -128,18 +132,45 @@
     });
   }
 
-  /* ---------- SMOOTH SCROLL OFFSET FIX FOR STICKY NAV ---------- */
+  /* ---------- SMOOTH SCROLL + A11Y FOCUS MGMT ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener("click", function (e) {
       var id = a.getAttribute("href");
-      if (id.length < 2) return;
+      if (!id || id === "#") return;
       var t = document.querySelector(id);
       if (!t) return;
       e.preventDefault();
       var navH = document.getElementById("nav") ? document.getElementById("nav").offsetHeight : 0;
-      var top = t.getBoundingClientRect().top + window.pageYOffset - navH - 12;
-      window.scrollTo({ top: top, behavior: "smooth" });
+      var dest = t.getBoundingClientRect().top + window.pageYOffset - navH - 12;
+      window.scrollTo({ top: Math.max(0, dest), behavior: "smooth" });
+      // a11y: move focus to target for keyboard/screen-reader users
+      if (t.tabIndex < 0) t.setAttribute("tabindex", "-1");
+      setTimeout(function () { try { t.focus({ preventScroll: true }); } catch (_) {} }, 420);
     });
   });
+
+  /* ---------- SCROLL-SPY: active nav link ---------- */
+  var navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
+  var spyTargets = [];
+  navLinks.forEach(function (a) {
+    var id = a.getAttribute("href");
+    if (id && id.length > 1) {
+      var el = document.querySelector(id);
+      if (el) spyTargets.push({ a: a, el: el });
+    }
+  });
+  if (spyTargets.length && "IntersectionObserver" in window) {
+    var spyObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var match = spyTargets.find(function (t) { return t.el === e.target; });
+        if (!match) return;
+        if (e.isIntersecting) {
+          navLinks.forEach(function (l) { l.classList.remove("is-active"); });
+          match.a.classList.add("is-active");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    spyTargets.forEach(function (t) { spyObs.observe(t.el); });
+  }
 
 })();
