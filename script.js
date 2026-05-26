@@ -76,6 +76,33 @@
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
+  /* ---------- STATS COUNT-UP ---------- */
+  var counters = document.querySelectorAll(".stat strong[data-count]");
+  if (counters.length && "IntersectionObserver" in window) {
+    var animate = function (el) {
+      var target = parseInt(el.getAttribute("data-count"), 10);
+      var prefix = el.getAttribute("data-prefix") || "";
+      var suffix = el.getAttribute("data-suffix") || "";
+      var dur = 1400, start = performance.now();
+      var step = function (now) {
+        var p = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = prefix + Math.round(target * eased) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+    var statObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          animate(e.target);
+          statObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function (c) { statObs.observe(c); });
+  }
+
   /* ---------- BACK TO TOP ---------- */
   var top = document.getElementById("toTop");
   if (top) {

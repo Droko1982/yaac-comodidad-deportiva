@@ -370,14 +370,14 @@
   <div class="hero__glow"></div>
   <div class="hero__grid">
     <div class="hero__copy">
-      <span class="hero__badge"><i></i> SEAMLESS · HECHO EN COLOMBIA</span>
+      <span class="hero__badge"><i></i> HECHO EN PEREIRA · ENVIADO A LAS 32 CAPITALES 🇨🇴</span>
       <h1 class="hero__title">
         Comodidad que se<br>
         <span class="grad-text">siente en cada</span><br>
         movimiento.
       </h1>
       <p class="hero__sub">
-        Ropa deportiva <strong>seamless</strong> — sin costuras, con compresión inteligente y tacto segunda piel. Diseñada para acompañarte en el gym, el yoga, el día a día… o en el café.
+        Ropa deportiva <strong>seamless</strong> — sin costuras, con compresión inteligente y tacto segunda piel. Diseñada y confeccionada en Colombia, enviada a tu puerta en <strong>cualquier ciudad del país</strong> en 1 a 5 días.
       </p>
       <div class="hero__cta">
         <a class="btn btn--primary btn--xl" href="https://wa.me/573054727101?text=Hola%20YAAC%2C%20quiero%20pedir%20por%20la%20p%C3%A1gina%20web" target="_blank" rel="noopener">
@@ -390,7 +390,9 @@
         <li>✓ Compresión sin marcar</li>
         <li>✓ Push-up natural</li>
         <li>✓ Respirable y secado rápido</li>
-        <li>✓ Envíos a toda Colombia</li>
+        <li>✓ Pago contra entrega disponible</li>
+        <li>✓ Envío gratis desde $250k</li>
+        <li>✓ Cambios hasta 8 días</li>
       </ul>
     </div>
     <div class="hero__visual">
@@ -420,10 +422,10 @@
 <!-- ========== STATS BAR ========== -->
 <section class="stats" aria-label="Beneficios rápidos">
   <div class="container stats__grid">
-    <div class="stat"><strong>100%</strong><span>Hecho en Colombia 🇨🇴</span></div>
+    <div class="stat"><strong data-count="100" data-suffix="%">100%</strong><span>Hecho en Colombia 🇨🇴</span></div>
     <div class="stat"><strong>0</strong><span>Costuras que rocen</span></div>
-    <div class="stat"><strong>+30</strong><span>Ciudades con envío</span></div>
-    <div class="stat"><strong>4.9★</strong><span>Calificación clientas</span></div>
+    <div class="stat"><strong data-count="32" data-prefix="+">+32</strong><span>Ciudades con envío</span></div>
+    <div class="stat"><strong>4.9<small>★</small></strong><span>Calificación clientas</span></div>
     <div class="stat"><strong>2–5</strong><span>Días de envío</span></div>
   </div>
 </section>
@@ -635,38 +637,148 @@
         </ul>
         <p class="ship-free"><strong>Envío gratis</strong> en compras superiores a <strong>$250.000 COP</strong>. Pago contra entrega disponible en ciudades principales.</p>
       </div>
-      <div class="ship-map" aria-hidden="true">
-        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-          <!-- Colombia silhouette stylized -->
-          <path d="M180 30 C 230 30, 290 60, 310 120 C 340 160, 350 220, 330 280 C 320 320, 290 360, 260 410 C 240 440, 220 470, 200 480 C 180 470, 160 440, 150 410 C 130 370, 100 320, 90 270 C 80 210, 95 150, 130 100 C 145 70, 160 45, 180 30 Z" fill="rgba(255,45,107,0.12)" stroke="currentColor" stroke-width="1.2"/>
-          <!-- city dots -->
-          <g fill="#FF2D6B">
-            <circle cx="175" cy="195" r="7"/>
-            <text x="125" y="200" font-family="Manrope" font-size="12" font-weight="800" fill="currentColor">Pereira ★</text>
+      <div class="ship-map" aria-label="Mapa de Colombia con ciudades atendidas por YAAC">
+        <svg viewBox="0 0 360 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mapTitle">
+          <title id="mapTitle">Colombia — Cobertura nacional YAAC</title>
+          <defs>
+            <linearGradient id="coGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="rgba(255,45,107,0.18)"/>
+              <stop offset="100%" stop-color="rgba(194,24,91,0.08)"/>
+            </linearGradient>
+            <radialGradient id="seaGrad" cx="0.5" cy="0.3" r="0.9">
+              <stop offset="0%" stop-color="rgba(255,45,107,0.05)"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </radialGradient>
+            <filter id="cityGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
 
-            <circle cx="170" cy="180" r="4"/>
-            <text x="100" y="175" font-family="Manrope" font-size="10" fill="currentColor">Manizales</text>
+          <!-- ocean background -->
+          <rect width="360" height="480" fill="url(#seaGrad)"/>
 
-            <circle cx="180" cy="210" r="4"/>
-            <text x="190" y="216" font-family="Manrope" font-size="10" fill="currentColor">Armenia</text>
+          <!-- Caribbean Sea label -->
+          <text x="60" y="48" class="map-sea" font-family="Manrope, sans-serif" font-size="9" font-weight="600" letter-spacing="2" fill="currentColor" opacity="0.45">MAR · CARIBE</text>
+          <!-- Pacific Ocean label -->
+          <text x="20" y="270" class="map-sea" font-family="Manrope, sans-serif" font-size="9" font-weight="600" letter-spacing="2" fill="currentColor" opacity="0.45" transform="rotate(-78 28 270)">OC&#201;ANO · PAC&#205;FICO</text>
 
-            <circle cx="220" cy="170" r="5"/>
-            <text x="230" y="170" font-family="Manrope" font-size="10" fill="currentColor">Medellín</text>
+          <!-- Colombia silhouette (realistic shape) -->
+          <path
+            d="M 232 32
+               L 244 33 L 252 39 L 251 50 L 244 58
+               L 232 62 L 220 64
+               C 205 66, 192 73, 180 80
+               C 168 84, 155 86, 142 90
+               C 128 96, 116 105, 108 117
+               C 100 128, 93 138, 88 150
+               C 84 158, 80 167, 76 175
+               C 72 182, 67 188, 62 195
+               C 60 205, 62 215, 64 224
+               C 67 234, 65 244, 60 254
+               C 53 270, 48 286, 50 302
+               C 53 316, 62 327, 73 333
+               C 84 340, 96 344, 108 348
+               C 120 352, 130 357, 138 364
+               C 144 372, 148 382, 150 392
+               C 153 405, 155 418, 158 432
+               C 160 446, 165 458, 172 466
+               L 182 470 L 191 466
+               C 198 462, 205 458, 212 452
+               C 224 442, 236 430, 248 416
+               C 262 400, 274 384, 282 366
+               C 290 350, 296 332, 300 314
+               C 304 298, 308 282, 310 266
+               C 312 250, 311 234, 308 220
+               C 305 208, 299 198, 292 188
+               C 286 178, 280 168, 276 158
+               C 272 148, 268 138, 262 130
+               C 256 122, 250 116, 245 110
+               C 243 100, 244 90, 247 82
+               C 249 74, 246 65, 240 58
+               L 235 50 L 232 41 Z"
+            fill="url(#coGrad)"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+            opacity="0.85"/>
 
-            <circle cx="240" cy="265" r="5"/>
-            <text x="250" y="270" font-family="Manrope" font-size="10" fill="currentColor">Bogotá</text>
+          <!-- Internal cordillera lines (decorative) -->
+          <g stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.25" stroke-dasharray="2 3">
+            <path d="M 120 110 C 130 160, 130 210, 140 260 C 145 300, 155 340, 165 380"/>
+            <path d="M 160 100 C 170 150, 180 200, 190 250 C 200 290, 215 320, 235 350"/>
+            <path d="M 200 110 C 220 160, 240 210, 260 260 C 275 300, 285 330, 295 360"/>
+          </g>
 
-            <circle cx="160" cy="245" r="4"/>
-            <text x="90" y="250" font-family="Manrope" font-size="10" fill="currentColor">Cali</text>
+          <!-- Pereira pulse (sede) -->
+          <g class="map-pin map-pin--hq">
+            <circle cx="118" cy="235" r="16" fill="rgba(255,45,107,0.18)">
+              <animate attributeName="r" values="14;22;14" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.4;0;0.4" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="118" cy="235" r="7" fill="#FF2D6B" filter="url(#cityGlow)"/>
+            <circle cx="118" cy="235" r="3.5" fill="#FFFFFF"/>
+          </g>
+          <text x="55" y="234" class="map-label map-label--hq" font-family="Manrope, sans-serif" font-size="11" font-weight="800" fill="currentColor">PEREIRA</text>
+          <text x="55" y="246" class="map-label map-label--hq" font-family="Manrope, sans-serif" font-size="8" font-weight="700" fill="#FF2D6B" letter-spacing="1">★ SEDE</text>
 
-            <circle cx="200" cy="80" r="4"/>
-            <text x="210" y="82" font-family="Manrope" font-size="10" fill="currentColor">Cartagena</text>
+          <!-- Other cities -->
+          <g class="map-cities" fill="#FF2D6B">
+            <!-- Barranquilla -->
+            <circle cx="148" cy="92" r="4"/>
+            <text x="155" y="95" class="map-label" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Barranquilla</text>
+            <!-- Santa Marta -->
+            <circle cx="170" cy="86" r="3.5"/>
+            <text x="177" y="84" class="map-label" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.8">Santa Marta</text>
+            <!-- Cartagena -->
+            <circle cx="125" cy="108" r="4"/>
+            <text x="65" y="112" class="map-label" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Cartagena</text>
+            <!-- Medellín -->
+            <circle cx="138" cy="195" r="5"/>
+            <text x="146" y="198" class="map-label" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Medellín</text>
+            <!-- Manizales -->
+            <circle cx="135" cy="218" r="3"/>
+            <text x="143" y="220" class="map-label" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.8">Manizales</text>
+            <!-- Armenia -->
+            <circle cx="124" cy="248" r="3"/>
+            <text x="60" y="252" class="map-label" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.8">Armenia</text>
+            <!-- Ibagué -->
+            <circle cx="150" cy="252" r="3"/>
+            <text x="158" y="255" class="map-label" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.8">Ibagué</text>
+            <!-- Cali -->
+            <circle cx="105" cy="278" r="4.5"/>
+            <text x="50" y="282" class="map-label" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Cali</text>
+            <!-- Bogotá -->
+            <circle cx="178" cy="248" r="5.5"/>
+            <text x="187" y="252" class="map-label" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Bogotá</text>
+            <!-- Bucaramanga -->
+            <circle cx="210" cy="178" r="4"/>
+            <text x="218" y="181" class="map-label" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Bucaramanga</text>
+            <!-- Cúcuta -->
+            <circle cx="232" cy="158" r="3"/>
+            <text x="239" y="160" class="map-label" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.8">Cúcuta</text>
+            <!-- Villavicencio -->
+            <circle cx="200" cy="270" r="3"/>
+            <text x="208" y="272" class="map-label" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.8">Villavicencio</text>
+            <!-- Pasto -->
+            <circle cx="100" cy="340" r="3"/>
+            <text x="45" y="343" class="map-label" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.8">Pasto</text>
+            <!-- Leticia (Amazon tip) -->
+            <circle cx="182" cy="460" r="3"/>
+            <text x="190" y="463" class="map-label" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.8">Leticia</text>
+          </g>
 
-            <circle cx="225" cy="65" r="4"/>
-            <text x="235" y="65" font-family="Manrope" font-size="10" fill="currentColor">Barranquilla</text>
+          <!-- compass rose -->
+          <g transform="translate(310, 50)" opacity="0.45">
+            <circle r="14" fill="none" stroke="currentColor" stroke-width="0.7"/>
+            <path d="M 0 -14 L 3 0 L 0 14 L -3 0 Z" fill="currentColor"/>
+            <text x="0" y="-18" text-anchor="middle" font-family="Manrope, sans-serif" font-size="8" font-weight="700" fill="currentColor">N</text>
+          </g>
 
-            <circle cx="260" cy="200" r="4"/>
-            <text x="270" y="204" font-family="Manrope" font-size="10" fill="currentColor">Bucaramanga</text>
+          <!-- coverage badge -->
+          <g transform="translate(180, 30)" class="map-badge">
+            <rect x="-58" y="-12" width="116" height="22" rx="11" fill="#FF2D6B"/>
+            <text x="0" y="3" text-anchor="middle" font-family="Manrope, sans-serif" font-size="9" font-weight="800" fill="#FFFFFF" letter-spacing="1.2">COBERTURA 100% 🇨🇴</text>
           </g>
         </svg>
       </div>
@@ -1038,6 +1150,17 @@
     <span>Hecho con ❤ en el Eje Cafetero</span>
   </div>
 </footer>
+
+<!-- ========== STICKY MOBILE CTA (only mobile, replaces float-WA) ========== -->
+<div class="m-cta" aria-label="Acciones rápidas">
+  <a class="m-cta__btn m-cta__btn--wa" href="https://wa.me/573054727101?text=Hola%20YAAC%2C%20vengo%20de%20la%20p%C3%A1gina%20web" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.5 0 .18 5.32.18 11.88c0 2.1.55 4.15 1.6 5.95L0 24l6.31-1.65a11.84 11.84 0 0 0 5.74 1.46c6.55 0 11.88-5.32 11.88-11.88 0-3.17-1.24-6.15-3.41-8.45zM12.06 21.8a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.5-5.29c0-5.46 4.44-9.9 9.9-9.9 2.65 0 5.13 1.03 7 2.9a9.85 9.85 0 0 1 2.9 7c0 5.46-4.44 9.92-9.92 9.92zm5.43-7.41c-.3-.15-1.76-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01a1.1 1.1 0 0 0-.8.37c-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/></svg>
+    <span>Pedir por WhatsApp</span>
+  </a>
+  <a class="m-cta__btn m-cta__btn--ig" href="https://www.instagram.com/yaac_comodidadeportiva/" target="_blank" rel="noopener" aria-label="Instagram YAAC">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.25-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
+  </a>
+</div>
 
 <!-- ========== BACK TO TOP ========== -->
 <button class="to-top" id="toTop" aria-label="Volver arriba" title="Volver arriba">
