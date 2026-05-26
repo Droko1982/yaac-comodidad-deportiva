@@ -64,13 +64,17 @@ em { font-style: italic; color: var(--brand); }
   --shadow: 0 10px 40px rgba(11,11,14,0.08);
   --shadow-lg: 0 20px 70px rgba(255,45,107,0.18);
 
-  /* Fixed (NO swap — siempre oscuro: footer, stats, reviews) */
+  /* Fixed (NO swap — siempre oscuro: footer, stats, reviews, pills) */
   --bg-fixed-dark: #08070C;
   --bg-fixed-dark-2: #15101C;
+  --bg-pill: #0A0A0E;
   --ink-on-dark: #F5EFE6;
   --ink-on-dark-2: rgba(245,239,230,0.72);
   --ink-on-dark-3: rgba(245,239,230,0.50);
   --border-on-dark: rgba(245,239,230,0.12);
+
+  /* Brand-readable (WCAG AA en ambos temas: deep en light, brillante en dark) */
+  --brand-readable: #B91556;
 
   --rad-sm: 10px;
   --rad-md: 16px;
@@ -97,6 +101,7 @@ em { font-style: italic; color: var(--brand); }
   --shadow: 0 10px 50px rgba(0,0,0,0.5);
   --shadow-lg: 0 20px 80px rgba(255,45,107,0.40);
   --cream: #1A1320;
+  --brand-readable: #FF85AB;
 }
 
 /* ---------- 3. UTILITIES ---------- */
@@ -119,7 +124,7 @@ em { font-style: italic; color: var(--brand); }
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 4px;
-  color: var(--brand);
+  color: var(--brand-readable);
   padding: 6px 14px;
   border-radius: 999px;
   background: rgba(255,45,107,0.10);
@@ -358,7 +363,7 @@ em { font-style: italic; color: var(--brand); }
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 3px;
-  color: var(--brand);
+  color: var(--brand-readable);
   width: fit-content;
 }
 .hero__badge i {
@@ -682,7 +687,7 @@ em { font-style: italic; color: var(--brand); }
 .product__pill {
   position: absolute;
   top: 14px; left: 14px;
-  background: var(--ink);
+  background: var(--bg-pill);
   color: #fff;
   padding: 6px 14px;
   border-radius: 999px;
@@ -712,7 +717,7 @@ em { font-style: italic; color: var(--brand); }
   align-items: center;
   font-weight: 700;
   font-size: 14px;
-  color: var(--brand);
+  color: var(--brand-readable);
   letter-spacing: 0.3px;
 }
 
@@ -1207,7 +1212,7 @@ em { font-style: italic; color: var(--brand); }
 .city-card p { color: var(--ink-2); font-size: 13px; line-height: 1.5; flex: 1; }
 .city-card a {
   margin-top: 6px;
-  color: var(--brand);
+  color: var(--brand-readable);
   font-weight: 700;
   font-size: 13px;
 }
@@ -1232,8 +1237,8 @@ em { font-style: italic; color: var(--brand); }
   font-size: 15px;
 }
 .compare thead th {
-  background: var(--ink);
-  color: #fff;
+  background: var(--bg-pill);
+  color: #FFFFFF;
   font-weight: 800;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -1325,8 +1330,8 @@ em { font-style: italic; color: var(--brand); }
   right: 26px;
   width: 44px; height: 44px;
   border-radius: 999px;
-  background: var(--ink);
-  color: #fff;
+  background: var(--bg-pill);
+  color: #FFFFFF;
   display: inline-flex;
   align-items: center;
   justify-content: center;
