@@ -325,7 +325,22 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="#" class="nav__logo" aria-label="YAAC — Inicio">
-      <img src="assets/img/logo.svg" alt="YAAC Comodidad Deportiva" width="160" height="48">
+      <svg viewBox="0 0 360 110" width="160" height="48" role="img" aria-label="YAAC" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="navGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FF5B8E"/>
+            <stop offset="100%" stop-color="#C2185B"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Anton, 'Archivo Black', Impact, sans-serif" font-weight="900">
+          <text x="0" y="68" font-size="86" letter-spacing="2" fill="currentColor">YAA</text>
+          <text x="216" y="68" font-size="86" letter-spacing="2" fill="url(#navGrad)">C</text>
+          <circle cx="295" cy="22" r="6" fill="url(#navGrad)"/>
+        </g>
+        <g font-family="Manrope, system-ui, sans-serif" font-weight="700" letter-spacing="4">
+          <text x="2" y="96" font-size="13" fill="currentColor" opacity="0.7">COMODIDAD · DEPORTIVA</text>
+        </g>
+      </svg>
     </a>
     <nav class="nav__links" aria-label="Navegación principal">
       <a href="#productos">Colección</a>
@@ -1116,7 +1131,22 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <img src="assets/img/logo.svg" alt="YAAC" width="180" height="55">
+      <svg class="footer__logo" viewBox="0 0 360 110" width="180" height="55" role="img" aria-label="YAAC Comodidad Deportiva" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="footGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FF5B8E"/>
+            <stop offset="100%" stop-color="#FF2D6B"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Anton, 'Archivo Black', Impact, sans-serif" font-weight="900">
+          <text x="0" y="68" font-size="86" letter-spacing="2" fill="#F5EFE6">YAA</text>
+          <text x="216" y="68" font-size="86" letter-spacing="2" fill="url(#footGrad)">C</text>
+          <circle cx="295" cy="22" r="6" fill="url(#footGrad)"/>
+        </g>
+        <g font-family="Manrope, system-ui, sans-serif" font-weight="700" letter-spacing="4">
+          <text x="2" y="96" font-size="13" fill="#F5EFE6" opacity="0.7">COMODIDAD · DEPORTIVA</text>
+        </g>
+      </svg>
       <p>Ropa deportiva seamless — comodidad deportiva real. Hecho en Pereira, Colombia, para que te muevas como tú quieras.</p>
     </div>
     <div class="footer__col">
