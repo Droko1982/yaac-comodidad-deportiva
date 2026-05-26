@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 110" role="img" aria-label="YAAC — Comodidad Deportiva">
+  <defs>
+    <linearGradient id="yaacGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF2D6B"/>
+      <stop offset="100%" stop-color="#C2185B"/>
+    </linearGradient>
+  </defs>
+  <g font-family="Anton, 'Archivo Black', Impact, sans-serif" font-weight="900">
+    <text x="0" y="68" font-size="86" letter-spacing="2" fill="currentColor">YAA</text>
+    <text x="216" y="68" font-size="86" letter-spacing="2" fill="url(#yaacGrad)">C</text>
+    <circle cx="295" cy="22" r="6" fill="url(#yaacGrad)"/>
+  </g>
+  <g font-family="Manrope, 'Plus Jakarta Sans', system-ui, sans-serif" font-weight="700" letter-spacing="4">
+    <text x="2" y="96" font-size="13" fill="currentColor" opacity="0.85">COMODIDAD · DEPORTIVA</text>
+  </g>
+</svg>

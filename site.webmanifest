@@ -1,0 +1,15 @@
+{
+  "name": "YAAC Comodidad Deportiva",
+  "short_name": "YAAC",
+  "description": "Ropa deportiva seamless — Pereira, envíos a toda Colombia.",
+  "start_url": "/yaac-comodidad-deportiva/",
+  "scope": "/yaac-comodidad-deportiva/",
+  "display": "standalone",
+  "background_color": "#0B0B0E",
+  "theme_color": "#FF2D6B",
+  "lang": "es-CO",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/img/logo-mark.svg", "sizes": "192x192 512x512", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
