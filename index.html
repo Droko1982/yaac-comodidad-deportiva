@@ -661,9 +661,9 @@
         <p class="ship-free"><strong>Envío gratis</strong> en compras superiores a <strong>$250.000 COP</strong>. Pago contra entrega disponible en ciudades principales.</p>
       </div>
       <div class="ship-map" aria-label="Mapa de Colombia con ciudades atendidas por YAAC">
-        <svg viewBox="0 0 460 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mapTitle">
+        <svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="mapTitle">
           <title id="mapTitle">Colombia — Cobertura nacional YAAC</title>
-          <desc>Silueta geográfica real de Colombia con la península de La Guajira al noreste, costa Pacífica al oeste, corredor amazónico hasta Leticia al sur y proyección hacia los Llanos al este. Pereira (sede) destacada en el centro-oeste.</desc>
+          <desc>Mapa geográfico de Colombia con la península de La Guajira al noreste, golfo de Urabá al noroeste, costa Pacífica del Chocó al oeste, corredor amazónico hasta Leticia al sur y proyección oriental hasta Puerto Carreño en el río Orinoco. Pereira destacada como sede.</desc>
           <defs>
             <linearGradient id="coGrad" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stop-color="rgba(255,45,107,0.22)"/>
@@ -675,148 +675,168 @@
             </filter>
           </defs>
 
-          <!-- Neighbor country labels (subtle context) -->
-          <text x="170" y="38" font-family="Manrope, sans-serif" font-size="10" font-weight="800" letter-spacing="3" fill="currentColor" opacity="0.45">MAR · CARIBE</text>
-          <text x="20" y="360" font-family="Manrope, sans-serif" font-size="10" font-weight="800" letter-spacing="3" fill="currentColor" opacity="0.45" transform="rotate(-78 20 360)">OC&#201;ANO · PAC&#205;FICO</text>
-          <text x="395" y="170" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">VENEZUELA</text>
-          <text x="385" y="450" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">BRASIL</text>
-          <text x="65" y="475" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">ECUADOR · PER&#218;</text>
-          <text x="50" y="160" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">PANAM&#193;</text>
+          <!-- Country/ocean labels -->
+          <text x="190" y="38" font-family="Manrope, sans-serif" font-size="11" font-weight="800" letter-spacing="4" fill="currentColor" opacity="0.45">MAR · CARIBE</text>
+          <text x="18" y="400" font-family="Manrope, sans-serif" font-size="11" font-weight="800" letter-spacing="4" fill="currentColor" opacity="0.45" transform="rotate(-78 18 400)">OC&#201;ANO · PAC&#205;FICO</text>
+          <text x="430" y="200" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">VENEZUELA</text>
+          <text x="420" y="500" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">BRASIL</text>
+          <text x="60" y="540" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">PER&#218;</text>
+          <text x="40" y="475" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">ECUADOR</text>
+          <text x="50" y="170" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.32" letter-spacing="1.5">PANAM&#193;</text>
 
-          <!-- Colombia silhouette
-               viewBox: 0 0 460 620 · x = 50 + (lon+79)*30 · y = 50 + (12.5-lat)*30.6
-               Trazado horario desde Punta Gallinas (12.46° N, 71.66° W) -->
+          <!-- Colombia silhouette (silueta fiel basada en geo-coords lat/lon)
+               viewBox 500x700 · x = 40 + (lon+79)*35 · y = 40 + (12.5-lat)*36
+               Rasgos clave incluidos: pen. de La Guajira (NE horn), golfo de Urabá (NW indent),
+               costa Pacífica del Chocó (bulto W), trapecio amazónico (cola S a Leticia),
+               proyección oriental al Orinoco (Puerto Carreño NE).
+               Trazado horario desde Punta Gallinas (12.46°N, 71.66°W). -->
           <path
-            d="M 270 51
-               L 275 58
-               L 278 72
-               L 272 84
-               L 262 90
-               L 258 96
-               C 252 115, 246 140, 242 168
-               C 241 182, 244 190, 246 192
-               C 268 200, 312 220, 360 235
-               L 395 243
-               C 405 270, 400 305, 388 320
-               C 376 360, 358 392, 345 425
-               C 340 465, 335 502, 328 535
-               L 322 561
-               L 318 559
-               C 305 545, 280 515, 250 482
-               C 215 455, 175 430, 135 418
-               C 112 412, 100 409, 91 407
-               C 75 395, 58 378, 52 355
-               C 47 320, 48 285, 54 260
-               C 64 225, 80 200, 96 178
-               L 99 168
-               C 110 162, 122 158, 130 152
-               C 122 148, 116 145, 118 142
-               C 130 140, 142 140, 152 140
-               C 160 134, 162 124, 158 118
-               L 155 115
-               L 165 105
-               L 176 96
-               L 194 89
-               L 215 80
-               L 233 79
-               L 244 73
-               L 254 65
-               L 262 56
-               L 268 53
-               L 270 51 Z"
+            d="M 297 41
+               L 304 50
+               L 306 65
+               C 304 75, 300 82, 295 86
+               L 290 96
+               L 286 110
+               L 282 124
+               C 275 142, 268 168, 263 192
+               C 261 200, 263 205, 266 207
+               L 270 207
+               C 290 215, 320 225, 360 245
+               C 395 258, 425 263, 444 267
+               C 458 290, 458 322, 450 340
+               C 442 352, 432 354, 428 351
+               C 410 380, 388 410, 365 440
+               C 360 470, 365 510, 375 545
+               C 380 575, 378 605, 370 625
+               C 365 638, 360 643, 357 642
+               L 350 638
+               C 320 615, 280 580, 235 535
+               C 200 510, 165 488, 135 475
+               C 115 470, 100 465, 88 460
+               C 70 452, 55 442, 45 425
+               C 35 405, 30 380, 32 350
+               C 32 320, 38 295, 50 270
+               C 65 245, 82 220, 92 200
+               C 95 188, 96 182, 97 178
+               L 105 175
+               L 112 175
+               L 118 180
+               C 122 198, 124 215, 125 222
+               C 130 222, 132 215, 132 205
+               C 131 192, 130 185, 132 180
+               L 138 178
+               C 152 173, 165 168, 168 158
+               C 172 144, 170 134, 168 128
+               L 172 118
+               C 168 118, 162 118, 162 116
+               L 165 110
+               L 175 102
+               L 187 94
+               L 208 85
+               L 225 78
+               L 253 74
+               L 268 67
+               L 280 58
+               L 290 49
+               L 297 41 Z"
             fill="url(#coGrad)"
             stroke="currentColor"
             stroke-width="1.8"
             stroke-linejoin="round"
             opacity="0.95"/>
 
-          <!-- 3 cordilleras como líneas dashed sutiles -->
-          <g stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.20" stroke-dasharray="2 3">
-            <path d="M 95 400 C 90 360, 100 305, 115 255 C 125 215, 132 195, 138 175"/>
-            <path d="M 140 410 C 145 360, 155 305, 165 255 C 172 215, 178 195, 182 170"/>
-            <path d="M 175 418 C 195 365, 215 310, 232 258 C 245 218, 250 195, 248 175"/>
+          <!-- 3 cordilleras como líneas dashed sutiles (Occidental, Central, Oriental) -->
+          <g stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.20" stroke-dasharray="3 4">
+            <path d="M 100 450 C 95 400, 110 340, 130 280 C 142 230, 148 200, 150 175"/>
+            <path d="M 145 460 C 152 400, 165 340, 175 280 C 185 230, 190 200, 192 170"/>
+            <path d="M 185 465 C 205 405, 230 340, 250 280 C 265 230, 270 200, 268 170"/>
           </g>
 
-          <!-- Río Magdalena (sutil) -->
-          <path d="M 175 400 C 180 350, 185 290, 185 230 C 183 180, 175 130, 170 105" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.18"/>
+          <!-- Río Magdalena (corre por el valle entre Central y Oriental) -->
+          <path d="M 180 460 C 188 400, 195 330, 195 260 C 192 200, 185 150, 178 110" stroke="#4A90C2" stroke-width="0.7" fill="none" opacity="0.32"/>
 
-          <!-- Pereira pulse (SEDE) — coord lat 4.81 lon -75.69 → (149, 285) -->
+          <!-- Pereira pulse (SEDE) — coord 4.81N, 75.69W → (156, 317) -->
           <g>
-            <circle cx="149" cy="285" r="18" fill="rgba(255,45,107,0.22)">
-              <animate attributeName="r" values="14;24;14" dur="2.4s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.50;0;0.50" dur="2.4s" repeatCount="indefinite"/>
+            <circle cx="156" cy="317" r="20" fill="rgba(255,45,107,0.24)">
+              <animate attributeName="r" values="16;26;16" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.55;0;0.55" dur="2.4s" repeatCount="indefinite"/>
             </circle>
-            <circle cx="149" cy="285" r="7" fill="#FF2D6B" filter="url(#cityGlow)"/>
-            <circle cx="149" cy="285" r="3.5" fill="#FFFFFF"/>
+            <circle cx="156" cy="317" r="8" fill="#FF2D6B" filter="url(#cityGlow)"/>
+            <circle cx="156" cy="317" r="4" fill="#FFFFFF"/>
           </g>
-          <text x="80" y="282" font-family="Manrope, sans-serif" font-size="11" font-weight="800" fill="currentColor">PEREIRA</text>
-          <text x="80" y="294" font-family="Manrope, sans-serif" font-size="8" font-weight="700" fill="#FF2D6B" letter-spacing="1.2">&#9733; SEDE NACIONAL</text>
+          <text x="78" y="315" font-family="Manrope, sans-serif" font-size="12" font-weight="800" fill="currentColor">PEREIRA</text>
+          <text x="78" y="328" font-family="Manrope, sans-serif" font-size="9" font-weight="700" fill="#FF2D6B" letter-spacing="1.3">&#9733; SEDE NACIONAL</text>
 
-          <!-- Ciudades (geo-posicionadas con coords reales lat/lon) -->
+          <!-- Ciudades (todas geo-posicionadas por lat/lon reales) -->
           <g fill="#FF2D6B">
-            <!-- Punta Gallinas (apex norte) -->
-            <circle cx="270" cy="51" r="2.5" opacity="0.7"/>
+            <!-- Punta Gallinas decorative apex -->
+            <circle cx="297" cy="41" r="3" opacity="0.7"/>
+            <text x="307" y="44" font-family="Manrope, sans-serif" font-size="8" fill="currentColor" opacity="0.6">Punta Gallinas</text>
 
             <!-- Riohacha -->
-            <circle cx="233" cy="79" r="3"/>
-            <text x="240" y="78" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Riohacha</text>
+            <circle cx="253" cy="74" r="3"/>
+            <text x="259" y="72" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Riohacha</text>
             <!-- Santa Marta -->
-            <circle cx="194" cy="89" r="3.5"/>
-            <text x="200" y="86" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Santa Marta</text>
+            <circle cx="208" cy="85" r="3.5"/>
+            <text x="216" y="82" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Santa Marta</text>
             <!-- Barranquilla -->
-            <circle cx="176" cy="96" r="4"/>
-            <text x="183" y="99" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Barranquilla</text>
+            <circle cx="187" cy="94" r="4"/>
+            <text x="194" y="98" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Barranquilla</text>
             <!-- Cartagena -->
-            <circle cx="155" cy="115" r="4"/>
-            <text x="90" y="118" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Cartagena</text>
-            <!-- Sincelejo / Montería area -->
-            <circle cx="148" cy="146" r="2.5" opacity="0.6"/>
+            <circle cx="162" cy="116" r="4"/>
+            <text x="90" y="120" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Cartagena</text>
+            <!-- Montería -->
+            <circle cx="149" cy="175" r="2.5" opacity="0.7"/>
+            <text x="155" y="178" font-family="Manrope, sans-serif" font-size="8" fill="currentColor" opacity="0.6">Montería</text>
             <!-- Medellín -->
-            <circle cx="153" cy="242" r="5"/>
-            <text x="161" y="245" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Medellín</text>
+            <circle cx="160" cy="265" r="5"/>
+            <text x="170" y="268" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Medellín</text>
             <!-- Manizales -->
-            <circle cx="154" cy="277" r="3"/>
-            <text x="161" y="275" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Manizales</text>
+            <circle cx="162" cy="307" r="3"/>
+            <text x="172" y="304" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Manizales</text>
             <!-- Armenia (close to Pereira) -->
-            <circle cx="150" cy="294" r="3"/>
-            <text x="92" y="310" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Armenia</text>
+            <circle cx="156" cy="327" r="3"/>
+            <text x="78" y="343" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Armenia</text>
             <!-- Ibagué -->
-            <circle cx="163" cy="297" r="3"/>
-            <text x="170" y="300" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Ibagué</text>
+            <circle cx="172" cy="330" r="3"/>
+            <text x="180" y="333" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Ibagué</text>
             <!-- Cali -->
-            <circle cx="124" cy="327" r="4.5"/>
-            <text x="70" y="331" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Cali</text>
+            <circle cx="126" cy="366" r="4.5"/>
+            <text x="68" y="370" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Cali</text>
             <!-- Bogotá -->
-            <circle cx="198" cy="288" r="5.5"/>
-            <text x="207" y="291" font-family="Manrope, sans-serif" font-size="11" font-weight="800" fill="currentColor">Bogotá</text>
+            <circle cx="213" cy="320" r="6"/>
+            <text x="223" y="324" font-family="Manrope, sans-serif" font-size="12" font-weight="800" fill="currentColor">Bogotá</text>
             <!-- Bucaramanga -->
-            <circle cx="226" cy="215" r="4"/>
-            <text x="234" y="218" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Bucaramanga</text>
+            <circle cx="246" cy="234" r="4"/>
+            <text x="254" y="237" font-family="Manrope, sans-serif" font-size="10" font-weight="700" fill="currentColor">Bucaramanga</text>
             <!-- Cúcuta -->
-            <circle cx="245" cy="191" r="3"/>
-            <text x="252" y="190" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Cúcuta</text>
+            <circle cx="268" cy="206" r="3"/>
+            <text x="277" y="204" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Cúcuta</text>
             <!-- Villavicencio -->
-            <circle cx="211" cy="306" r="3"/>
-            <text x="218" y="309" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Villavicencio</text>
+            <circle cx="228" cy="341" r="3"/>
+            <text x="236" y="344" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Villavicencio</text>
             <!-- Pasto -->
-            <circle cx="102" cy="396" r="3"/>
-            <text x="50" y="398" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Pasto</text>
+            <circle cx="100" cy="446" r="3"/>
+            <text x="50" y="448" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Pasto</text>
             <!-- Leticia (Amazon tip) -->
-            <circle cx="322" cy="561" r="3"/>
-            <text x="265" y="565" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Leticia</text>
+            <circle cx="357" cy="642" r="3.5"/>
+            <text x="290" y="646" font-family="Manrope, sans-serif" font-size="9" fill="currentColor" opacity="0.85">Leticia</text>
+            <!-- Puerto Carreño (NE corner) -->
+            <circle cx="444" cy="267" r="2.5" opacity="0.7"/>
+            <text x="380" y="270" font-family="Manrope, sans-serif" font-size="8" fill="currentColor" opacity="0.6">Pto. Carreño</text>
           </g>
 
           <!-- Compass rose top-right -->
-          <g transform="translate(425, 70)" opacity="0.55">
-            <circle r="14" fill="none" stroke="currentColor" stroke-width="0.7"/>
-            <path d="M 0 -14 L 3 0 L 0 14 L -3 0 Z" fill="currentColor"/>
-            <text x="0" y="-18" text-anchor="middle" font-family="Manrope, sans-serif" font-size="8" font-weight="800" fill="currentColor">N</text>
+          <g transform="translate(465, 70)" opacity="0.55">
+            <circle r="16" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            <path d="M 0 -16 L 4 0 L 0 16 L -4 0 Z" fill="currentColor"/>
+            <text x="0" y="-20" text-anchor="middle" font-family="Manrope, sans-serif" font-size="9" font-weight="800" fill="currentColor">N</text>
           </g>
 
           <!-- Badge cobertura -->
-          <g transform="translate(230, 22)">
-            <rect x="-82" y="-12" width="164" height="22" rx="11" fill="#FF2D6B"/>
-            <text x="0" y="3" text-anchor="middle" font-family="Manrope, sans-serif" font-size="9" font-weight="800" fill="#FFFFFF" letter-spacing="1.3">COBERTURA NACIONAL 🇨🇴</text>
+          <g transform="translate(250, 18)">
+            <rect x="-90" y="-12" width="180" height="22" rx="11" fill="#FF2D6B"/>
+            <text x="0" y="3" text-anchor="middle" font-family="Manrope, sans-serif" font-size="10" font-weight="800" fill="#FFFFFF" letter-spacing="1.5">COBERTURA NACIONAL 🇨🇴</text>
           </g>
         </svg>
       </div>
