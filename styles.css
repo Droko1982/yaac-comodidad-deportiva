@@ -207,10 +207,15 @@ em { font-style: italic; color: var(--brand); }
   margin: 0 auto;
   padding: 14px clamp(16px, 4vw, 32px);
 }
-.nav__logo img {
+.nav__logo {
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+}
+.nav__logo svg, .nav__logo img {
   height: 38px;
   width: auto;
-  color: var(--ink);
+  display: block;
 }
 .nav__links {
   display: flex;
@@ -1101,7 +1106,7 @@ em { font-style: italic; color: var(--brand); }
   padding-bottom: 50px;
   border-bottom: 1px solid var(--border-on-dark);
 }
-.footer__brand img { filter: invert(1) brightness(2); height: 44px; width: auto; margin-bottom: 18px; }
+.footer__brand .footer__logo { height: 44px; width: auto; margin-bottom: 18px; display: block; }
 .footer__brand p { color: var(--ink-on-dark-2); max-width: 320px; line-height: 1.65; }
 .footer__col { display: flex; flex-direction: column; gap: 10px; }
 .footer__col strong {
