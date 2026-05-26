@@ -76,6 +76,20 @@
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
+  /* ---------- BACK TO TOP ---------- */
+  var top = document.getElementById("toTop");
+  if (top) {
+    var onScroll = function () {
+      if (window.scrollY > 600) top.classList.add("is-show");
+      else top.classList.remove("is-show");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    top.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   /* ---------- ANN-BAR: pause on hover ---------- */
   var ann = document.querySelector(".ann-bar__track");
   if (ann) {
